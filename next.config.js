@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
 
-module.exports = nextConfig
+module.exports = {
+  
+  nextConfig : {
+    reactStrictMode: true,
+  },
+  compiler: {
+    // Enables the styled-components SWC transform
+    styledComponents: true,
+    
+  }
+}
+const withImages = require('next-images')
+module.exports = withImages()
