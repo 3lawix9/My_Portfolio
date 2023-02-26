@@ -1,37 +1,61 @@
 import Image from 'next/image'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import dynamic from "next/dynamic";
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaHome, FaCode, FaEnvelope, FaJs, FaMedapps } from 'react-icons/fa';
+import { Link } from 'react-scroll';
 
 const links = [
-    { label: 'Home', href: '/' },
-    { label: 'Projects', href: '/projects' },
-    { label: 'About', href: '/about' },
-    { label: 'Contact', href: '/contact' },
-  ];
-  
-  const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const toggleMenu = () => setIsOpen(!isOpen);
+  { label: 'Home', href: 'home' },
+  { label: 'Experience', href: 'experience' },
+  { label: 'Skills', href: 'skills' },
+  { label: 'Projects', href: 'projects' },
+  { label: 'Contact', href: 'contact' },
+];
 
-    return (
-    <nav className="flex fixed w-full  bg-white items-center justify-between p-4 shadow-md">
-      <a className='ml-7' href="/">
-        <Image src='/coding.png' alt="Logo"width={50}
-      height={50} loading="lazy"  />
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768 && isOpen) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isOpen]);
+
+  return (
+    <nav  className="flex fixed text-sm z-50  xl:text-md w-full items-center justify-between p-4 ">
+      <a className="xl:ml-20 sm:ml-16 xl:mr-[-100px] " href="/">
+        <Image src="/coding.png" alt="Logo" width={55} height={55} loading="lazy" />
       </a>
-      <div className=" hidden md:flex   ">
-        <ul className="flex  ">
+      <div className="hidden md:flex p-6 bg-gradient-to-r from-slate-100 via-slate-200 to-slate-100 rounded-full">
+        <ul className="flex " >
           {links.map(({ label, href }) => (
-            <li key={label} className="px-4 mr-14 ">
-              <a href={href} className=" text-black  hover:text-blue-700 ">
-                {label}
-              </a>
+            <li key={label} className="px-4">
+              <Link
+                to={href}
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                className="flex items-center justify-center text-black hover:cursor-pointer uppercase
+                 hover:bg-gray-300 hover:duration-700 hover:rounded-full py-2 px-3"
+              >
+                {label === 'Home' && <FaHome className="mr-2" />}
+                {label === 'Experience' && <FaCode className="mr-2" />}
+                {label === 'Skills' && <FaJs className="mr-2" />}
+                {label === 'Projects' && <FaMedapps className="mr-2" />}
+                {label === 'Contact' && <FaEnvelope className="mr-2" />}
+                <span className="hidden md:inline-block">{label}</span>
+              </Link>
             </li>
           ))}
         </ul>
       </div>
-
 
     {/* Mobile responsive  */}
     
@@ -48,7 +72,7 @@ const links = [
       <ul className="w-full block bg-white p-4">
         {links.map(({ label, href }) => (
           <li key={label} className=" my-2">
-            <a href={href} className=" block py-1 px-2 text-black hover:text-blue-700 ">
+            <a href={href} className=" block  py-1 px-2 text-black hover:text-blue-700 ">
               {label}
             </a>
           </li>

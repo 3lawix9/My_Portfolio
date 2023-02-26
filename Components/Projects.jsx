@@ -10,7 +10,7 @@ const SKILLS_DATA = [
 
 function Projects() {
   return (
-    <div id="skills" className="w-full mb-28 p-2">
+    <div id="projects" className="w-full mb-28 p-2">
       <div className="max-w-[500px] lg:max-w-[900px] mx-auto flex flex-col justify-center h-full">
         <p className="text-xl mb-8 tracking-widest text-center uppercase text-black">
           Projects

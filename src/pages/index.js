@@ -10,12 +10,12 @@ import Skills from "Components/Skills";
 export default function Home() {
   return (
     <>
-     <Navbar/>
-      <About/>
-      <Experience/>
-      <Skills/>
-      <Projects/>
-      <Contact/>
-    </>
+    <Navbar />
+     <About />
+     <Experience/>
+     <Skills />
+     <Projects />
+     <Contact/>
+   </>
   )
 }
