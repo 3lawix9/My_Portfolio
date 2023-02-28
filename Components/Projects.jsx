@@ -13,9 +13,7 @@ const SKILLS_DATA = [
   link:'https://github.com/3lawix9/Calculator', project: 'https://calculator-eta-black.vercel.app'},
 ];
 
-const loaderProp =({ src }) => {
-  return src;
-}
+
 
 function Projects() {
   return (
@@ -30,7 +28,7 @@ function Projects() {
             <div key={index} className=" shadow-md bg-gray-200  ">
               <div className="relative h-52  ">
                 <Image className='rounded-t-lg' src={image} alt="Logo" fill style={{objectFit:"cover"}}
-                loader={loaderProp} />
+                 />
                 
               </div>
               <div className="p-12  ">
