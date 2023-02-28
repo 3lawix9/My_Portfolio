@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head/>
+      <link rel="stylesheet" href="../styles/globals.css"></link>
         <body class="debug-screens">
         <Main />
         <NextScript />
