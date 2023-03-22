@@ -13,6 +13,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from 'react-icons/si';
+import Fade from 'react-reveal/Fade';
 
 
 
@@ -43,10 +44,11 @@ function Skills(){
         <p className="text-xl mb-8 tracking-widest text-center uppercase text-red-500">
           Skills & Technology
         </p>
+        
         <div className="grid grid-cols-2 sm:gap-8">
-          {SKILLS_Icons.map(({ Icon, color, title }, index) => (
+          {SKILLS_Icons.map(({ Icon, color, title }, element) => (
+            <Fade  duration={1200} key={element}>
             <div
-              key={index}
               className="p-6 shadow-lg rounded-xl hover:scale-105 ease-in duration-300"
             >
               <div className="grid grid-cols-2 gap-4 justify-center items-center">
@@ -58,6 +60,7 @@ function Skills(){
                 </div>
               </div>
             </div>
+            </Fade>
           ))}
         </div>
       </div>

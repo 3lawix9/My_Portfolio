@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { Fade } from 'react-reveal';
 
 
 const SKILLS_DATA = [
@@ -22,10 +23,11 @@ function Projects() {
         <p className="text-xl mb-12 tracking-widest text-center uppercase text-black">
           Projects
         </p>
+        <Fade left >
         <div className="grid xl:grid-cols-2 gap-10  ">
-          {SKILLS_DATA.map(({ image, title, header , link , project }, index) => (
+          {SKILLS_DATA.map(({ image, title, header , link , project }, element) => (
 
-            <div key={index} className=" shadow-md bg-gray-200  ">
+            <div key={element} className=" shadow-md bg-gray-200  ">
               <div className="relative h-52  ">
                 <Image className='rounded-t-lg' src={image} alt="Logo" fill style={{objectFit:"cover"}}
                  />
@@ -50,6 +52,7 @@ function Projects() {
             </div>
           ))}
         </div>
+        </Fade>
       </div>
     </div>
   );

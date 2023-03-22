@@ -1,14 +1,9 @@
-import '../styles/globals.css'
-import { css } from '@emotion/react';
+import '../styles/globals.css';
 
-const globalStyles = css`
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-`;
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} css={globalStyles} />
+
+
+const MyApp = ({ Component, pageProps }) => {
+  return <Component {...pageProps} />
 }
-
 export default MyApp

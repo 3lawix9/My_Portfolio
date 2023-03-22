@@ -36,8 +36,8 @@ const Experience = () => {
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">What Can I do ?</h1>
         </div>
         <div className="flex flex-wrap justify-center  ">
-          {cardData.map((card, index) => (
-            <div className="md:w-1/2 w-full p-4" key={index}>
+          {cardData.map((card, element) => (
+            <div className="md:w-1/2 w-full p-4" key={element}>
               <div className="border border-gray-200 h-full p-6 rounded-lg">
                 <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-4">
                   {card.icon}
