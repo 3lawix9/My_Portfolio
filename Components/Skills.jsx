@@ -13,11 +13,10 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from 'react-icons/si';
-import Fade from 'react-reveal/Fade';
 
 
 
-export const SKILLS_Icons = [
+export const skills_icon = [
   { Icon: SiHtml5, color: '#D84924', title: 'HTML' },
   { Icon: SiCss3, color: '#0166B1', title: 'CSS' },
   { Icon: SiJavascript, color: '#EAD41C', title: 'JavaScript' },
@@ -39,17 +38,17 @@ export const SKILLS_Icons = [
 function Skills(){
 
   return (
-    <div id="skills" className="w-full mb-28 p-2 ">
+    <div  className="w-full mb-28 p-2 ">
       <div className="max-w-[1020px] mx-auto flex flex-col justify-center h-full">
         <p className="text-xl mb-8 tracking-widest text-center uppercase text-red-500">
           Skills & Technology
         </p>
         
         <div className="grid grid-cols-2 sm:gap-8">
-          {SKILLS_Icons.map(({ Icon, color, title }, element) => (
-            <Fade  duration={1200} key={element}>
+          {skills_icon.map(({ Icon, color, title }, element) => (
             <div
               className="p-6 shadow-lg rounded-xl hover:scale-105 ease-in duration-300"
+              key={element}
             >
               <div className="grid grid-cols-2 gap-4 justify-center items-center">
                 <div className=" m-auto">
@@ -60,7 +59,6 @@ function Skills(){
                 </div>
               </div>
             </div>
-            </Fade>
           ))}
         </div>
       </div>

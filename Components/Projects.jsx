@@ -1,9 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import { Fade } from 'react-reveal';
 
 
-const SKILLS_DATA = [
+const PROJECTS_DATA = [
   { image:'/website-1.png', header: 'Salah times', title: 'I did this project with React Tailwind ', 
   link:'https://github.com/3lawix9/My-first-website' , project: 'https://salawat.vercel.app'},
   { image: '/website-2.png', header: 'Adventure website', title: 'I did this project with React Tailwind' , 
@@ -23,9 +22,9 @@ function Projects() {
         <p className="text-xl mb-12 tracking-widest text-center uppercase text-black">
           Projects
         </p>
-        <Fade left >
+        
         <div className="grid xl:grid-cols-2 gap-10  ">
-          {SKILLS_DATA.map(({ image, title, header , link , project }, element) => (
+          {PROJECTS_DATA.map(({ image, title, header , link , project }, element) => (
 
             <div key={element} className=" shadow-md bg-gray-200  ">
               <div className="relative h-52  ">
@@ -52,7 +51,6 @@ function Projects() {
             </div>
           ))}
         </div>
-        </Fade>
       </div>
     </div>
   );
