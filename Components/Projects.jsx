@@ -3,13 +3,13 @@ import Image from 'next/image';
 
 
 const PROJECTS_DATA = [
-  { image:'/website-1.png', header: 'Salah times', title: 'I did this project with React Tailwind ', 
+  { image:'/Website-1.png', header: 'Salah times', title: 'I did this project with React Tailwind ', 
   link:'https://github.com/3lawix9/My-first-website' , project: 'https://salawat.vercel.app'},
-  { image: '/website-2.png', header: 'Adventure website', title: 'I did this project with React Tailwind' , 
+  { image: '/Website-2.png', header: 'Adventure website', title: 'I did this project with React Tailwind' , 
   link:'https://github.com/3lawix9/Adventure-website', project: ''},
-  { image: '/website-3.png', header: 'Tech Bank website', title: 'I did this project with React Tailwind' , 
+  { image: '/Website-3.png', header: 'Tech Bank website', title: 'I did this project with React Tailwind' , 
   link:'https://github.com/3lawix9/AI-website', project: 'https://ai-website-sage.vercel.app'},
-  { image: '/website-4.png', header: 'Calculator', title: 'I did this project with React Tailwind' , 
+  { image: '/Website-4.png', header: 'Calculator', title: 'I did this project with React Tailwind' , 
   link:'https://github.com/3lawix9/Calculator', project: 'https://calculator-eta-black.vercel.app'},
 ];
 
