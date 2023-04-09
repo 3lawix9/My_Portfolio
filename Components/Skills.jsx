@@ -38,7 +38,7 @@ export const skills_icon = [
 function Skills(){
 
   return (
-    <div  className="w-full mb-28 p-2 ">
+    <div id="skills"  className="w-full mb-28 p-2 ">
       <div className="max-w-[1020px] mx-auto flex flex-col justify-center h-full">
         <p className="text-xl mb-8 tracking-widest text-center uppercase text-red-500">
           Skills & Technology
@@ -52,7 +52,7 @@ function Skills(){
             >
               <div className="grid grid-cols-2 gap-4 justify-center items-center">
                 <div className=" m-auto">
-                  <Icon size={70} color={color} />
+                  <Icon size={60} color={color} />
                 </div>
                 <div className="flex flex-col items-center justify-center">
                   <h3>{title}</h3>
