@@ -1,18 +1,38 @@
 import React from 'react'
+import Image from 'next/image'
+import Man from '../public/man.png'
+import { motion } from 'framer-motion';
+
+
 
 const About = () => {
   return (
-    <div id="home" className='flex flex-col items-center justify-center h-[85vh]  '>
-      <div className='  xl:text-left text-center  '>
-        <p className=' text-sm '>Hi, I'm</p>
-        <h1 className='text-6xl font-bold xl:text-7xl'>ALI AHMED</h1>
-        <h2 className='text-blue-800 font-bold text-xl sm:text-2xl'>[Front-End Web Developer]</h2>
-        <p className='text-gray-500 py-1 xl:text-lg text-sm'>I am a student from Yemen, who focuses on web development, 
+    <motion.div
+    initial={{ opacity: 0,  }}
+    animate={{ opacity: 1, }}
+    transition={{ duration: 0.8 }}
+    
+      id="home" className='flex flex-col lg:flex-row items-center justify-center h-[85vh] mt-32 lg:mt-0  '>
+      <div className='lg:text-left text-center mt-10 lg:mr-36 '>
+        <p className=' text-lg font-semibold'>Hi, I'm 👋</p>
+        <h1 className='text-4xl lg:text-6xl font-bold'>ALI AHMED</h1>
+        <h2 className='text-blue-800 font-bold text-lg md:text-xl lg:text-2xl'>[Front-End Web Developer]</h2>
+        <p className='text-gray-500 py-1 text-sm lg:text-base'>I am a student from Yemen, who focuses on web development, 
         <br/>especially Frontend web development.</p>
-        <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4'>Get in Touch</button>
+        <button className='txt--gradient-blue border-r-indigo-500  text-white font-bold py-3 px-4 rounded mt-4 '>Get in Touch</button>
+
       </div>
-    </div>
-  )
-}
+      <div className='flex flex-col '>
+      <Image 
+          width={350}
+          height={350}
+          loading='lazy'
+         className='mt-10 ' src={Man} alt="Logo" 
+                 />
+      </div>
+    </motion.div>
+  );
+};
+    
 
 export default About

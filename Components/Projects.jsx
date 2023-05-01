@@ -1,5 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
+import { motion } from "framer-motion";
+
 
 
 const PROJECTS_DATA = [
@@ -26,7 +28,13 @@ function Projects() {
         <div className="grid xl:grid-cols-2 gap-10  ">
           {PROJECTS_DATA.map(({ image, title, header , link , project }, element) => (
 
-            <div key={element} className=" shadow-md bg-gray-200  ">
+<motion.div
+key={element}
+className="shadow-md bg-slate-200"
+initial={{ x:'-100vw' }}
+animate= {{x:0}}
+transition={{ duration: 0.5 , bounce: 0.3 }}
+>
               <div className="relative h-52  ">
                 <Image className='rounded-t-lg' src={image} alt="Logo" fill style={{objectFit:"cover"}}
                  />
@@ -48,7 +56,8 @@ function Projects() {
                   </button>
                 </div>
               </div>
-            </div>
+              </motion.div>
+
           ))}
         </div>
       </div>

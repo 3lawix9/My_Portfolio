@@ -13,6 +13,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from 'react-icons/si';
+import { motion } from 'framer-motion';
 
 
 
@@ -43,13 +44,17 @@ function Skills(){
         <p className="text-xl mb-8 tracking-widest text-center uppercase text-red-500">
           Skills & Technology
         </p>
-        
+
         <div className="grid grid-cols-2 sm:gap-8">
           {skills_icon.map(({ Icon, color, title }, element) => (
-            <div
-              className="p-6 shadow-lg rounded-xl hover:scale-105 ease-in duration-300"
-              key={element}
+            <motion.div
+            key={element}
+            className=" p-6 shadow-lg rounded-xl hover:scale-105 ease-in duration-300"
+            initial={{ opacity: 0,  }}
+            animate={{ opacity: 1, }}
+            transition={{ duration: 0.8 }}
             >
+            
               <div className="grid grid-cols-2 gap-4 justify-center items-center">
                 <div className=" m-auto">
                   <Icon size={60} color={color} />
@@ -58,7 +63,7 @@ function Skills(){
                   <h3>{title}</h3>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
