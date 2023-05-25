@@ -1,7 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Lora&family=Noto+Sans+Arabic:wght@200&family=Roboto+Mono:wght@200&family=Secular+One&family=Source+Sans+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Inconsolata:wght@300&family=Lora&family=Noto+Sans+Arabic:wght@200&family=Roboto+Mono:wght@200&family=Secular+One&family=Source+Sans+Pro:wght@200&display=swap');
+/* body {
+   
+} */
+.nav{
+    font-family: "Inconsolata";
+}
+.txt--gradient-blue { 
+background-image:linear-gradient(to right, #0e45e9, #126fe8); 
 
-body {
-    background-color: #ECF0F3;
 }

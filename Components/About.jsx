@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import Man from '../public/man.png'
+import Man from '../public/man3.gif'
 import { motion } from 'framer-motion';
 
 
@@ -22,11 +22,11 @@ const About = () => {
         <button className='txt--gradient-blue border-r-indigo-500  text-white font-bold py-3 px-4 rounded mt-4 '>Get in Touch</button>
 
       </div>
-      <div className='flex flex-col '>
+      <div className='flex flex-col  '>
       <Image 
-          width={350}
-          height={350}
-          loading='lazy'
+          width={500}
+          height={500}
+          priority={true}
          className='mt-10 ' src={Man} alt="Logo" 
                  />
       </div>

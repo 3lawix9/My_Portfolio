@@ -28,15 +28,15 @@ function Projects() {
         <div className="grid xl:grid-cols-2 gap-10  ">
           {PROJECTS_DATA.map(({ image, title, header , link , project }, element) => (
 
-<motion.div
-key={element}
-className="shadow-md bg-slate-200"
-initial={{ x:'-100vw' }}
-animate= {{x:0}}
-transition={{ duration: 0.5 , bounce: 0.3 }}
->
+              <motion.div
+              key={element}
+              className="shadow-md bg-slate-200"
+              initial={{ x:'-100vw' }}
+              animate= {{x:0}}
+              transition={{ duration: 0.5 , bounce: 0.3 }}
+              >
               <div className="relative h-52  ">
-                <Image className='rounded-t-lg' src={image} alt="Logo" fill style={{objectFit:"cover"}}
+                <Image className='rounded-t-lg' src={image} loading='lazy' alt="Logo" sizes="100vw" fill style={{objectFit:"cover"}}
                  />
                 
               </div>

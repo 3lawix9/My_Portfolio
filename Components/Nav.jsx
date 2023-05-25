@@ -1,7 +1,5 @@
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
-import { FaBars, FaTimes } from 'react-icons/fa'
 import { FaHome, FaCode, FaEnvelope, FaJs, FaMedapps } from 'react-icons/fa'
 import { Link } from 'react-scroll'
 const links = [
@@ -13,22 +11,10 @@ const links = [
 ]
 
 const Navbar = () => {
-  // const [isOpen, setIsOpen] = useState(false)
-  // const toggleMenu = () => setIsOpen(!isOpen)
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     if (window.innerWidth >= 768 && isOpen) {
-  //       setIsOpen(false)
-  //     }
-  //   }
-  //   window.addEventListener('resize', handleResize)
-  //   return () => window.removeEventListener('resize', handleResize)
-  // }, [isOpen])
 
   return (
-    <nav className='flex top-0 fixed text-sm z-50 md:text-md w-full items-center justify-center p-4 '>
-          <a className='' href='/'>
+    <nav className='flex nav top-0 fixed text-sm z-50 md:text-md w-full items-center justify-center p-4 '>
+          {/* <a className='' href='/'>
         <Image
           src="/logo3.png"
           alt='Logo'
@@ -36,8 +22,8 @@ const Navbar = () => {
           height={89}
           loading='lazy'
         />
-      </a>
-      <div className=' md:flex p-6  bg-slate-200 rounded-full'>
+      </a> */}
+      <div className=' md:flex p-6 bg-slate-200 rounded-full'>
         
         <ul className='flex'>
           {links.map(({ label, href }) => (
