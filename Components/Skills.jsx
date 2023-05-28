@@ -14,6 +14,7 @@ import {
   SiTypescript,
 } from 'react-icons/si';
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 
 
@@ -37,11 +38,31 @@ export const skills_icon = [
 
 
 function Skills(){
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const slideFromLeft = {
+    hidden: {
+      opacity: 0,
+      x: -100,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        type: 'spring',
+        bounce: 0.3,
+      },
+    },
+  };
 
   return (
-    <div id="skills"  className="w-full mb-28 p-2 ">
+    <div id="skills"  className="w-full mb-28 p-2 " ref={ref}>
       <div className="max-w-[1020px] mx-auto flex flex-col justify-center h-full">
-        <p className="text-xl mb-8 tracking-widest text-center uppercase text-red-500">
+        <p className="text-xl mb-8 tracking-widest text-center uppercase text-blue-900">
           Skills & Technology
         </p>
 
@@ -49,10 +70,12 @@ function Skills(){
           {skills_icon.map(({ Icon, color, title }, element) => (
             <motion.div
             key={element}
-            className=" p-6 shadow-lg rounded-xl hover:scale-105 ease-in duration-300"
-            initial={{ opacity: 0,  }}
-            animate={{ opacity: 1, }}
-            transition={{ duration: 0.8 }}
+            className=" p-6 shadow-lg rounded-2xl  "
+            variants={slideFromLeft}
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden'}
+            
+
             >
             
               <div className="grid grid-cols-2 gap-4 justify-center items-center">
