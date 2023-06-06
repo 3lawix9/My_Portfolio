@@ -18,14 +18,15 @@ import { useInView } from 'react-intersection-observer';
 
 
 
+
 export const skills_icon = [
   { Icon: SiHtml5, color: '#D84924', title: 'HTML' },
   { Icon: SiCss3, color: '#0166B1', title: 'CSS' },
   { Icon: SiJavascript, color: '#EAD41C', title: 'JavaScript' },
-  { Icon: SiTypescript, color: '#2E72BC', title: 'TypeScript' },
+  // { Icon: SiTypescript, color: '#2E72BC', title: 'TypeScript' },
   { Icon: SiReact, color: '#5CCFEE', title: 'React' },
   { Icon: SiNextdotjs, color: '#000000', title: 'Next.js' },
-  { Icon: SiSass, color: '#C26191', title: 'Sass' },
+  // { Icon: SiSass, color: '#C26191', title: 'Sass' },
   { Icon: SiTailwindcss, color: '#35B3EB', title: 'Tailwind' },
   { Icon: SiGit, color: '#F14E32', title: 'Git' },
   { Icon: SiNodedotjs, color: '#68A063', title: 'Node.js' },
@@ -38,6 +39,8 @@ export const skills_icon = [
 
 
 function Skills(){
+
+
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,

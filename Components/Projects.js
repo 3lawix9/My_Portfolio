@@ -4,30 +4,22 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FaReact,  FaHtml5,  } from 'react-icons/fa';
 import { DiJavascript1,  DiNodejsSmall, DiCss3, DiMongodb } from 'react-icons/di';
-import { SiTailwindcss } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import 'intersection-observer';
+import translations from '../translate/translations';
 
 
 
 
-const PROJECTS_DATA = [
-  { image:'/Website-1.png', header: 'Salah times', title: 'Fisrt challenge on Twitter , and first time using API to fetch data from Aladhan.com website , I learned how to to use Axios library and some of React hooks ', 
-  link:'https://github.com/3lawix9/My-first-website' , project: 'https://salawat.vercel.app'},
-
-  { image: '/Website-2.png', header: 'Adventure website', title: 'I used React Router and some Pure CSS and using Video on the website. ' , 
-  link:'https://github.com/3lawix9/Adventure-website', project: ''},
-
-  { image: '/Website-3.png', header: 'Tech Bank website', title: 'Practice and improving Tailwinds CSS framework to be more fast with CSS. ' , 
-  link:'https://github.com/3lawix9/AI-website', project: 'https://ai-website-sage.vercel.app', extraIcon: <SiTailwindcss className="text-blue-500 text-2xl hover:-translate-y-1 transition-all duration-500" />},
-
-  { image: '/Website-4.png', header: 'Calculator', title: 'Building a calculator to improve my skill of programming with JavaScript' , 
-  link:'https://github.com/3lawix9/Calculator', project: 'https://calculator-eta-black.vercel.app'},
-];
 
 
 
-function Projects() {
+
+function Projects({language}) {
+
+  const currentLanguage = language;
+  const { PROJECTS_DATA  } = translations.projects[currentLanguage];
+
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,

@@ -1,32 +1,25 @@
-import Image from 'next/image'
-import dynamic from 'next/dynamic'
-import { FaHome, FaCode, FaEnvelope, FaJs, FaMedapps } from 'react-icons/fa'
-import { Link } from 'react-scroll'
-const links = [
-  { label: 'Home', href: 'home' },
-  { label: 'Experience', href: 'experience' },
-  { label: 'Skills', href: 'skills' },
-  { label: 'Projects', href: 'projects' },
-  { label: 'Contact', href: 'contact' },
-]
+import React from 'react';
+import { Link } from 'react-scroll';
+import { FaHome, FaCode, FaEnvelope, FaJs, FaMedapps, FaLanguage } from 'react-icons/fa';
+import { MdLanguage } from 'react-icons/md'; // Assuming this is an Arabic icon
+import translations from '../translate/translations';
 
-const Navbar = () => {
+const links = [
+  { label: 'home', href: 'home', icon: FaHome },
+  { label: 'experience', href: 'experience', icon: FaCode },
+  { label: 'skills', href: 'skills', icon: FaJs },
+  { label: 'projects', href: 'projects', icon: FaMedapps },
+  { label: 'contact', href: 'contact', icon: FaEnvelope },
+];
+
+const Nav = ({ language, toggleLanguage }) => {
+  const currentLanguage = language;
 
   return (
     <nav className='flex nav top-0 fixed text-sm z-50 md:text-md w-full items-center justify-center p-4 '>
-          {/* <a className='' href='/'>
-        <Image
-          src="/logo3.png"
-          alt='Logo'
-          width={89}
-          height={89}
-          loading='lazy'
-        />
-      </a> */}
-      <div className=' md:flex p-6 bg-slate-200 rounded-full'>
-        
+      <div className='md:flex p-6 bg-slate-200 rounded-full'>
         <ul className='flex'>
-          {links.map(({ label, href }) => (
+          {links.map(({ label, href, icon: Icon }) => (
             <li key={label} className='px-4'>
               <Link
                 to={href}
@@ -34,23 +27,37 @@ const Navbar = () => {
                 smooth={true}
                 offset={50}
                 duration={500}
-                className='flex items-center justify-center text-black hover:cursor-pointer uppercase
+                className='flex items-center justify-center text-black hover:cursor-pointer capitalize
                  hover:bg-gray-300 hover:duration-300 hover:rounded-xl py-2 px-3'
               >
-                {label === 'Home' && <FaHome className='mr-2 text-blue-700 text-lg' />}
-                {label === 'Experience' && <FaCode className='mr-2 text-lg text-blue-700' />}
-                {label === 'Skills' && <FaJs className='mr-2 text-lg text-blue-700' />}
-                {label === 'Projects' && <FaMedapps className='mr-2 text-lg text-blue-700' />}
-                {label === 'Contact' && <FaEnvelope className='mr-2 text-lg text-blue-700' />}
-                <span className='hidden md:inline-block'>{label}</span>
+                <Icon className='mr-2 text-xl text-blue-700' />
+                <span className='hidden font-semibold text-lg md:inline-block'>
+                  {translations[language][label]}
+                </span>
               </Link>
             </li>
           ))}
         </ul>
+        <button
+          className='flex items-center justify-center text-black hover:cursor-pointer capitalize
+                 hover:bg-gray-300 hover:duration-300 hover:rounded-xl py-2 px-3 ml-4'
+          onClick={toggleLanguage}
+        >
+          {currentLanguage === 'en' ? (
+            <>
+              <MdLanguage className='mr-2 text-xl text-blue-700' />
+               Arabic
+            </>
+          ) : (
+            <>
+              <MdLanguage className='mr-2 text-xl text-blue-700' />
+            English
+            </>
+          )}
+        </button>
       </div>
-
     </nav>
-  )
-}
+  );
+};
 
-export default dynamic(() => Promise.resolve(Navbar), { ssr: false })
+export default Nav;
