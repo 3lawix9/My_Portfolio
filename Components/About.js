@@ -19,13 +19,13 @@ const About = ({ language }) => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
       id="home"
-      className='flex flex-col lg:flex-row items-center justify-center h-[85vh] mt-32 lg:mt-0'
+      className='flex flex-col lg:flex-row items-center justify-center h-[85vh] mt-52 lg:mt-0'
     >
       <div className={`${textAlignment} `}>
         <p className='text-lg font-semibold'>{hi}</p>
-        <h1 className='text-4xl lg:text-6xl font-bold'>{name}</h1>
+        <h1 className='text-4xl lg:text-6xl uppercase font-bold'>{name}</h1>
         <h2 className='text-blue-800 font-bold py-2 text-lg md:text-xl lg:text-2xl'>{role}</h2>
-        <p className='text-slate-600 py-1 text-base'>{description}</p>
+        {<p className='text-slate-600 font-bold  py-1'>{description}</p>}
         <Link
           to='contact'
           spy={true}
@@ -33,9 +33,10 @@ const About = ({ language }) => {
           offset={50}
           duration={500}
         >
-          <button className='txt--gradient-blue border-r-indigo-500 text-white font-bold py-3 px-4 rounded mt-4'>
-            {getInTouch}
-          </button>
+        <button className='txt--gradient-blue border-r-indigo-500 text-white font-bold py-3 px-4 shadow-md rounded mt-4 transition
+         duration-300 ease-in-out hover:text-black'>
+        {getInTouch}
+        </button>
         </Link>
       </div>
       <div className={`flex flex-col ${imageAlignment}`}>
@@ -43,13 +44,15 @@ const About = ({ language }) => {
           width={500}
           height={500}
           priority={true}
-          className='mt-10'
+          className='mt-10 mb-32'
           src={Man}
           alt="Logo"
         />
       </div>
+      
     </motion.div>
   );
+  
 };
 
 export default About;

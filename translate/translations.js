@@ -30,7 +30,7 @@ const translations = {
       name: 'Ali Ahmed',
       role: '[Front-end Web Developer]',
       description:
-      "I'm a self-taught Developer from Yemen \nspecializing in web development in general\nand front-end user interface development in particular.",
+      "I'm a self-taught Developer from Yemen \nspecializing in web development",
       getInTouch: 'Get in touch',
     },
     ar: {
@@ -38,7 +38,7 @@ const translations = {
       name: 'علي أحمد',
       role: '[مطور واجهات الويب الأمامية]',
       description:
-        'أنا طالب من اليمن، متخصص في تطوير الويب بشكل عام وتطوير واجهات المستخدم الأمامية بشكل خاص.',
+        'أنا مبرمج من اليمن، متخصص في تطوير الويب بشكل عام وتطوير واجهات المستخدم الأمامية بشكل خاص.',
       getInTouch: 'تواصل معي',
     },
   },

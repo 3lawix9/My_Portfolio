@@ -32,6 +32,7 @@ const Experience = ({ language }) => {
   };
 
   return (
+    
     <section id="experience" className="text-black" ref={ref}>
       <div className="max-w-[1000px] px-5 py-24 mb-20 mx-auto">
         <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">

@@ -13,3 +13,20 @@
 background-image:linear-gradient(to right, #0e45e9, #126fe8); 
 
 }
+
+.spacer {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.wave {
+    aspect-ratio: 300/55;
+    background-image: url('./layered-waves-haikei\ \(2\).svg');
+}
+
+.waveUp { 
+    aspect-ratio: 300/55;
+    background-image: url('./layered-waves-haikei\ \(3\).svg');
+}
