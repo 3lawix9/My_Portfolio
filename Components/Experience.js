@@ -1,11 +1,8 @@
-import React from 'react'
-import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import translations from '../translate/translations';
-
-
-
-
+import SocialSidebar from './Social';
 
 const Experience = ({ language }) => {
   const currentLanguage = language;
@@ -32,8 +29,11 @@ const Experience = ({ language }) => {
   };
 
   return (
-    
-    <section id="experience" className="text-black" ref={ref}>
+    <section
+      id="experience"
+      className="text-black relative overflow-hidden"
+      ref={ref}
+    >
       <div className="max-w-[1000px] px-5 py-24 mb-20 mx-auto">
         <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-blue-900">

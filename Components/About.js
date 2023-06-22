@@ -13,6 +13,7 @@ const About = ({ language }) => {
   const textAlignment = isArabic ? 'lg:text-right text-center' : 'lg:text-left text-center';
   const imageAlignment = isArabic ? 'lg:order-first' : '';
 
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -25,7 +26,7 @@ const About = ({ language }) => {
         <p className='text-lg font-semibold'>{hi}</p>
         <h1 className='text-4xl lg:text-6xl uppercase font-bold'>{name}</h1>
         <h2 className='text-blue-800 font-bold py-2 text-lg md:text-xl lg:text-2xl'>{role}</h2>
-        {<p className='text-slate-600 font-bold  py-1'>{description}</p>}
+        {<p className='text-slate-600 font-bold capitalize  py-1'>{description}</p>}
         <Link
           to='contact'
           spy={true}

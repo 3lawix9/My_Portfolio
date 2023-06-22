@@ -101,10 +101,12 @@ function Projects({language}) {
                       </div>
                     </div>
                   </div>
+                  
                 </motion.div>
             )
           )}
         </div>
+        
       </div>
     </div>
   );

@@ -16,9 +16,6 @@ import {
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-
-
-
 export const skills_icon = [
   { Icon: SiHtml5, color: '#D84924', title: 'HTML' },
   { Icon: SiCss3, color: '#0166B1', title: 'CSS' },
@@ -32,15 +29,9 @@ export const skills_icon = [
   { Icon: SiNodedotjs, color: '#68A063', title: 'Node.js' },
   { Icon: SiExpress, color: '#000000', title: 'Express' },
   { Icon: SiMongodb, color: '#4DB33D', title: 'MongoDB' },
-  
-  
- 
 ];
 
-
-function Skills(){
-
-
+function Skills() {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -63,8 +54,8 @@ function Skills(){
   };
 
   return (
-    <div id="skills"  className="w-full mb-28 p-2 " ref={ref}>
-      <div className="max-w-[1020px] mx-auto flex flex-col justify-center h-full">
+    <div id="skills" className="w-full mb-28 p-2" ref={ref}>
+      <div className="max-w-[1020px] mx-auto flex flex-col justify-center h-full relative"> {/* Added 'relative' class */}
         <p className="text-xl mb-8 tracking-widest text-center uppercase text-blue-900">
           Skills & Technology
         </p>
@@ -72,17 +63,14 @@ function Skills(){
         <div className="grid grid-cols-2 sm:gap-8">
           {skills_icon.map(({ Icon, color, title }, element) => (
             <motion.div
-            key={element}
-            className=" p-6 shadow-lg rounded-2xl  "
-            variants={slideFromLeft}
-            initial="hidden"
-            animate={inView ? 'visible' : 'hidden'}
-            
-
+              key={element}
+              className="p-6 shadow-lg rounded-2xl"
+              variants={slideFromLeft}
+              initial="hidden"
+              animate={inView ? 'visible' : 'hidden'}
             >
-            
               <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                <div className=" m-auto">
+                <div className="m-auto">
                   <Icon size={60} color={color} />
                 </div>
                 <div className="flex flex-col items-center justify-center">
@@ -94,7 +82,7 @@ function Skills(){
         </div>
       </div>
     </div>
-          );
+  );
 }
 
-export default Skills
+export default Skills;
