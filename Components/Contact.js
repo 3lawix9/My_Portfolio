@@ -22,8 +22,8 @@ const ContactMe = ({language}) => {
         <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
           <div className="max-w-md mx-auto">
             <div>
-              <h1 className="text-3xl font-extrabold">{title}</h1>
-              <p className="mt-3">
+              <h1 className="text-3xl uppercase font-extrabold">{title}</h1>
+              <p className="mt-3 font-semibold ">
                 {description}
               </p>
               <hr className="mt-3 border-gray-300" />

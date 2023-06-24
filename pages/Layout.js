@@ -6,6 +6,7 @@ import Skills from '../Components/Skills';
 import Projects from '../Components/Projects';
 import ContactMe from '../Components/Contact';
 import SocialSidebar from '../Components/Social';
+import Quotes from '../Components/quotes';
 
 const Layout = () => {
   const [language, setLanguage] = useState('en');
@@ -36,7 +37,7 @@ const Layout = () => {
       <Projects language={language} />
       <div className="spacer wave"></div>
       <div className="spacer waveUp"></div>
-      <ContactMe language={language} />
+      <Quotes language={language} />
       <div className="spacer wave"></div>
     </>
   );

@@ -176,7 +176,7 @@ const translations = {
   contact: {
     en: {
     title: "Contact",
-    description: "I’m interested in freelance opportunities – especially ambitious or large projects. However, if you just want to say hi or have a question, don’t hesitate to contact me.",
+    description: "I’m interested in job opportunities , However if you just want to say hi or have a question, don’t hesitate to contact me.",
     name: "Name",
     email: "Email",
     message: "Message",
@@ -185,7 +185,7 @@ const translations = {
     ar : 
       {
         title: "تواصل معي",
-        description: "أنا مهتم بفرص العمل الحر - خاصة المشاريع الطموحة أو الكبيرة. ومع ذلك ، إذا كنت تريد فقط أن تقول مرحبًا أو لديك سؤال ، فلا تتردد في التواصل معي.",
+        description: "أنا مهتم بفرص العمل والحصول على الوظيفه ، ومع ذلك إذا كنت تريد فقط أن تقول مرحبًا أو لديك سؤال  فلا تتردد في التواصل معي.",
         name: "الاسم",
         email: "البريد الإلكتروني",
         message: "الرسالة",
