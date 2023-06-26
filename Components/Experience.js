@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import translations from '../translate/translations';
-import SocialSidebar from './Social';
 
 const Experience = ({ language }) => {
   const currentLanguage = language;
