@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import translations from '../translate/translations';
 
-const About = ({ language }) => {
+const About = ({ language , openSideBar}) => {
   const currentLanguage = language;
   const { hi, name, role, description, getInTouch } = translations.about[currentLanguage];
 
@@ -34,7 +34,7 @@ const About = ({ language }) => {
           offset={50}
           duration={500}
         >
-        <button className='txt--gradient-blue border-r-indigo-500 text-white font-bold py-3 px-4 shadow-md rounded mt-4 transition
+        <button onClick={openSideBar} className='txt--gradient-blue border-r-indigo-500 text-white font-bold py-3 px-4 shadow-md rounded mt-4 transition
          duration-300 ease-in-out hover:text-black'>
         {getInTouch}
         </button>

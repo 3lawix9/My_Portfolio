@@ -5,8 +5,7 @@ import {BsArrowLeftShort, BsArrowRightShort} from 'react-icons/bs';
 import { Link } from 'react-scroll';
 
 
-const SocialSidebar = () => {
-  const [sidebarVisible, setSidebarVisible] = useState(false);
+const SocialSidebar = ({sidebarVisible, setSidebarVisible}) => {
 
   const socialMediaLinks = [
     {

@@ -10,28 +10,32 @@ import Quotes from '../Components/Quotes';
 
 const Layout = () => {
   const [language, setLanguage] = useState('en');
-  const [socialSidebarVisible, setSocialSidebarVisible] = useState(true); // Set the initial value to true
+  const [sidebarVisible, setSidebarVisible] = useState(false);
 
   const toggleLanguage = () => {
     setLanguage(language === 'en' ? 'ar' : 'en');
   };
 
-  const toggleSocialSidebar = () => {
-    setSocialSidebarVisible(!socialSidebarVisible);
+  const toggleSidebar = () => {
+    setSidebarVisible(!sidebarVisible);
+  };
+
+  const openSideBar = () => {
+    setSidebarVisible(!sidebarVisible);
   };
 
   return (
     <>
-      {socialSidebarVisible && <SocialSidebar />}
-      <div className={`spacer waveUp ${socialSidebarVisible ? 'withSocialSidebar' : ''}`}></div>
-      <Nav language={language} toggleLanguage={toggleLanguage} toggleSocialSidebar={toggleSocialSidebar} />
-      <About language={language} />
+      <SocialSidebar sidebarVisible={sidebarVisible} setSidebarVisible={setSidebarVisible} />
+      <div className={`spacer waveUp ${sidebarVisible ? 'withSocialSidebar' : ''}`}></div>
+      <Nav language={language} toggleLanguage={toggleLanguage} toggleSidebar={toggleSidebar} openSideBar={openSideBar} />
+      <About language={language} openSideBar={openSideBar} />
       <div className="spacer wave"></div>
       <div className="spacer waveUp"></div>
       <Experience language={language} />
       <div className="spacer wave"></div>
       <div className="spacer waveUp"></div>
-      <Skills  />
+      <Skills />
       <div className="spacer wave"></div>
       <div className="spacer waveUp"></div>
       <Projects language={language} />
