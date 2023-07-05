@@ -135,40 +135,40 @@ const translations = {
   },
 
   ar: {
-    
-      PROJECTS_DATA: [
-        {
-          image: '/Website-1.png',
-          header: 'أوقات الصلاة',
-          title: 'أول تحدي على تويتر وأول مرة أستخدم فيها واجهة برمجة تطبيقات لاستدعاء البيانات من موقع Aladhan.com. تعلمت كيفية استخدام مكتبة Axios وبعض أدوات React.',
-          link: 'https://github.com/3lawix9/My-first-website',
-          project: 'https://salawat.vercel.app',
-        },
-        {
-          image: '/Website-2.png',
-          header: 'موقع المغامرة',
-          title: 'استخدمت موجه React وبعض CSS الخالص وأضفت فيديو إلى الموقع.',
-          link: 'https://github.com/3lawix9/Adventure-website',
-          project: '',
-        },
-        {
-          image: '/Website-3.png',
-          header: 'موقع بنك التكنولوجيا',
-          title: 'مارست وطورت مهاراتي في إطار Tailwind CSS لجعل الموقع أسرع باستخدام CSS.',
-          link: 'https://github.com/3lawix9/AI-website',
-          project: 'https://ai-website-sage.vercel.app',
-          extraIcon: <SiTailwindcss className="text-blue-500 text-2xl hover:-translate-y-1 transition-all duration-500" />,
-
-        },
-        {
-          image: '/Website-4.png',
-          header: 'الآلة الحاسبة',
-          title: 'بناء آلة حاسبة لتحسين مهارات البرمجة الخاصة بي باستخدام JavaScript.',
-          link: 'https://github.com/3lawix9/Calculator',
-          project: 'https://calculator-eta-black.vercel.app',
-        },
-      ],
+    PROJECTS_DATA: [
+      {
+        image: '/Website-1.png',
+        header: <div dir="rtl">أوقات الصلاة</div>,
+        title: <div dir="rtl">أول تحدي على تويتر وأول مرة أستخدم فيها واجهة برمجة تطبيقات لاستدعاء البيانات من موقع اذان تعلمت كيفية استخدام مكتبة Axios وبعض أدوات React.</div>,
+        link: 'https://github.com/3lawix9/My-first-website',
+        project: 'https://salawat.vercel.app',
+      },
+      {
+        image: '/Website-2.png',
+        header: <div dir="rtl">موقع المغامرة</div>,
+        title: <div dir="rtl">استخدمت React وبعض CSS العادي وأضفت فيديو إلى الموقع.</div>,
+        link: 'https://github.com/3lawix9/Adventure-website',
+        project: '',
+      },
+      {
+        image: '/Website-3.png',
+        header: <div dir="rtl">موقع بنك رقمي</div>,
+        title: <div dir="rtl">مارست وطورت مهاراتي في إطار Tailwind CSS لجعل الموقع أسرع باستخدام CSS.</div>,
+        link: 'https://github.com/3lawix9/AI-website',
+        project: 'https://ai-website-sage.vercel.app',
+        extraIcon: <SiTailwindcss className="text-blue-500 text-2xl hover:-translate-y-1 transition-all duration-500" />,
+      },
+      {
+        image: '/Website-4.png',
+        header: <div dir="rtl">الآلة الحاسبة</div>,
+        title: <div dir="rtl">بناء آلة حاسبة لتحسين مهارات البرمجة الخاصة بي باستخدام JavaScript.</div>,
+        link: 'https://github.com/3lawix9/Calculator',
+        project: 'https://calculator-eta-black.vercel.app',
+      },
+    ],
   },
+  
+  
 },
 
   // Contact 
