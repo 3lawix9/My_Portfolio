@@ -28,7 +28,7 @@ const translations = {
     en: {
       hi: 'Hello, I\'m 👋',
       name: 'Ali Ahmed',
-      role: '[Front-end Web Developer]',
+      role: ['Front-end Web Developer 💻', 'Software Engineer 📈🚀'], 
       description:
       "I'm a self-taught Developer from Yemen \nspecializing in web development",
       getInTouch: 'Get in touch',
@@ -36,7 +36,7 @@ const translations = {
     ar: {
       hi: 'مرحبًا، أنا 👋',
       name: 'علي أحمد',
-      role: '[مطور واجهات الويب الأمامية]',
+      role: ['مطور واجهات أمامية]', 'مطور برامج'],
       description:
         'أنا مبرمج من اليمن، متخصص في تطوير الويب بشكل عام وتطوير واجهات المستخدم الأمامية بشكل خاص.',
       getInTouch: 'تواصل معي',
@@ -153,7 +153,7 @@ const translations = {
       {
         image: '/Website-3.png',
         header: <div dir="rtl">موقع بنك رقمي</div>,
-        title: <div dir="rtl">مارست وطورت مهاراتي في إطار Tailwind CSS لجعل الموقع أسرع باستخدام CSS.</div>,
+        title: <div dir="rtl">تعلمت وطورت مهاراتي في إطار Tailwind CSS لجعل الموقع أسرع باستخدام CSS.</div>,
         link: 'https://github.com/3lawix9/AI-website',
         project: 'https://ai-website-sage.vercel.app',
         extraIcon: <SiTailwindcss className="text-blue-500 text-2xl hover:-translate-y-1 transition-all duration-500" />,

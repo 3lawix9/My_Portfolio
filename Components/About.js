@@ -4,6 +4,7 @@ import Man from '../public/man3.gif';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import translations from '../translate/translations';
+import Typewriter from 'typewriter-effect';
 
 const About = ({ language , openSideBar}) => {
   const currentLanguage = language;
@@ -25,7 +26,15 @@ const About = ({ language , openSideBar}) => {
       <div className={`${textAlignment} `}>
         <p className='text-lg font-semibold'>{hi}</p>
         <h1 className='text-4xl lg:text-6xl uppercase font-bold'>{name}</h1>
-        <h2 className='text-blue-800 font-bold py-2 text-lg md:text-xl lg:text-2xl'>{role}</h2>
+        <Typewriter
+          options={{
+          strings: role,
+          autoStart: true,
+          loop: true,
+          delay: 20,
+          wrapperClassName: 'text-blue-800 font-bold py-2 md:text-2xl text-lg ',
+        }}
+      />
         {<p className='text-slate-600 font-bold capitalize  py-1'>{description}</p>}
         <Link
           to='contact'
@@ -42,10 +51,10 @@ const About = ({ language , openSideBar}) => {
       </div>
       <div className={`flex flex-col ${imageAlignment}`}>
         <Image
-          width={500}
-          height={500}
+          width={450}
+          height={450}
           priority={true}
-          className='mt-10 mb-32'
+          className='mt-10 mb-28 rounded-xl'
           src={Man}
           alt="Logo"
         />
