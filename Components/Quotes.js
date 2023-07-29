@@ -10,7 +10,7 @@ function Quotes() {
 
   useEffect(() => {
     axios
-      .get('https://zenquotes.io/api/random?option1=value&option2=value')
+      .get('/api/random')
       .then(response => {
         const data = response.data;
         const { q ,a } = data[0];

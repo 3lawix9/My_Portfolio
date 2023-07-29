@@ -11,7 +11,7 @@ const links = [
   { label: 'experience', href: 'experience', icon: FaCode },
   { label: 'skills', href: 'skills', icon: FaJs },
   { label: 'projects', href: 'projects', icon: FaMedapps },
-  { label: 'contact', icon: FaEnvelope },
+  { label: 'contact',  icon: FaEnvelope },
 ];
 
 const Nav = ({ language, toggleLanguage, openSideBar }) => {
