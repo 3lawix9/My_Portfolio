@@ -4,12 +4,11 @@ import About from '../Components/About';
 import Experience from '../Components/Experience';
 import Skills from '../Components/Skills';
 import Projects from '../Components/Projects';
-// import ContactMe from '../Components/Contact';
 import SocialSidebar from '../Components/Social';
 import Quotes from '../Components/Quotes';
 
 const Layout = () => {
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState('ar');
   const [sidebarVisible, setSidebarVisible] = useState(false);
 
   const toggleLanguage = () => {

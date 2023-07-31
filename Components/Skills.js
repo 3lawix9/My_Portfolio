@@ -24,7 +24,7 @@ export const skills_icon = [
   { Icon: SiReact, color: '#5CCFEE', title: 'React' },
   { Icon: SiNextdotjs, color: '#000000', title: 'Next.js' },
   // { Icon: SiSass, color: '#C26191', title: 'Sass' },
-  { Icon: SiTailwindcss, color: '#35B3EB', title: 'Tailwind' },
+  { Icon: SiTailwindcss, color: '#35B3EB', title: 'TailwindCSS' },
   { Icon: SiGit, color: '#F14E32', title: 'Git' },
   { Icon: SiNodedotjs, color: '#68A063', title: 'Node.js' },
   { Icon: SiExpress, color: '#000000', title: 'Express' },
@@ -60,7 +60,7 @@ function Skills() {
           Skills & Technology
         </p>
 
-        <div className="grid grid-cols-2 sm:gap-8">
+        <div className="grid sm:grid-cols-2 sm:gap-8">
           {skills_icon.map(({ Icon, color, title }, element) => (
             <motion.div
               key={element}
@@ -69,11 +69,11 @@ function Skills() {
               initial="hidden"
               animate={inView ? 'visible' : 'hidden'}
             >
-              <div className="grid grid-cols-2 gap-4 justify-center items-center">
+              <div className="grid grid-cols-2 gap-2 justify-center items-center">
                 <div className="m-auto">
                   <Icon size={60} color={color} />
                 </div>
-                <div className="flex flex-col items-center justify-center">
+                <div className="flex flex-col font-semibold items-center justify-center">
                   <h3>{title}</h3>
                 </div>
               </div>

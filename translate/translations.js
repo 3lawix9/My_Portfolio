@@ -39,7 +39,7 @@ const translations = {
       role: ['  مطور واجهات أمامية'   
        , ' مطور برامج'],
       description:
-        'أنا مبرمج من اليمن، متخصص في تطوير الويب بشكل عام وتطوير واجهات المستخدم الأمامية بشكل خاص.',
+        'مطور ويب من اليمن، متخصص في تطوير الويب بشكل عام وتطوير واجهات المستخدم الأمامية بشكل خاص',
       getInTouch: 'تواصل معي',
     },
   },
@@ -113,7 +113,7 @@ const translations = {
         {
           image: '/Website-2.png',
           header: 'Adventure website',
-          title: 'I used React Router and some Pure CSS and added a video to the website.',
+          title: 'I used React Router and some Pure CSS and added a video to the website and more than one page .',
           link: 'https://github.com/3lawix9/Adventure-website',
           project: '',
         },
@@ -147,7 +147,7 @@ const translations = {
       {
         image: '/Website-2.png',
         header: <div dir="rtl">موقع المغامرة</div>,
-        title: <div dir="rtl">استخدمت React وبعض CSS العادي وأضفت فيديو إلى الموقع.</div>,
+        title: <div dir="rtl">استخدمت React وبعض CSS العادي وأضفت فيديو إلى الموقع مع اضافه أكثر من صفحه.</div>,
         link: 'https://github.com/3lawix9/Adventure-website',
         project: '',
       },

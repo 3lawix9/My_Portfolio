@@ -11,7 +11,7 @@ const links = [
   { label: 'experience', href: 'experience', icon: FaCode },
   { label: 'skills', href: 'skills', icon: FaJs },
   { label: 'projects', href: 'projects', icon: FaMedapps },
-  { label: 'contact',  icon: FaEnvelope },
+  { label: 'contact',  href: 'contact' , icon: FaEnvelope },
 ];
 
 const Nav = ({ language, toggleLanguage, openSideBar }) => {
@@ -32,8 +32,8 @@ const Nav = ({ language, toggleLanguage, openSideBar }) => {
   };
 
   return (
-    <nav className="flex top-0 fixed text-sm z-50 md:text-md sm:w-full items-center justify-center p-4">
-      <div className="md:flex border-gray-500 bg-white/70 p-6 shadow-lg backdrop-blur-lg dark:border-slate-700/60 dark:bg-slate-800/50 rounded-2xl">
+    <nav className="flex top-0 fixed text-sm z-50 md:text-md w-full items-center justify-center p-4">
+      <div className="md:flex border-gray-500 bg-white/70 p-6 shadow-lg backdrop-blur-lg  rounded-2xl">
         <ul className="flex">
           {links.map(({ label, href, icon: Icon }) => (
             <li key={label} className="sm:px-4">

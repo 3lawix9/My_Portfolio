@@ -10,7 +10,7 @@ function Quotes() {
 
   useEffect(() => {
     axios
-      .get('/api/random')
+      .get('/api/quotes')
       .then(response => {
         const data = response.data;
         const { q ,a } = data[0];

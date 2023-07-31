@@ -41,7 +41,8 @@ const About = ({ language, openSideBar }) => {
           }}
         />
         {
-          <p className="text-slate-600 font-bold capitalize py-1">
+          <p className="text-slate-600 mt-2
+           font-bold capitalize py-1">
             {description}
           </p>
         }
