@@ -47,7 +47,7 @@ const SocialSidebar = ({sidebarVisible, setSidebarVisible}) => {
     <div className="relative bg-gray-50  w-screen">
       {!sidebarVisible && (
         <div
-          className="fixed z-20 top-2/4 -translate-y-2/4 ml-4 w-12 h-12 lg:flex flex items-center justify-center gap-1 text-gray-700  rounded-full bg-white/50 shadow-lg backdrop-blur-lg cursor-pointer"
+          className="fixed btn-circle btn-outline z-20 top-2/4 -translate-y-2/4 ml-4 w-12 h-12 lg:flex flex items-center justify-center gap-1 text-gray-700 shadow-lg backdrop-blur-lg cursor-pointer"
           onClick={toggleSidebar}
         >
         <BsArrowRightShort className="w-6 h-6" />
@@ -56,7 +56,7 @@ const SocialSidebar = ({sidebarVisible, setSidebarVisible}) => {
 
       {sidebarVisible && (
         <motion.div
-          className="z-20 top-1/4  justify-around gap-4 border-t border-gray-200 bg-white/50 p-2.5 shadow-lg backdrop-blur-lg
+          className="z-20 top-1/4 glass justify-around gap-4 border-t text-white bg-gradient-to-br from-gray-200 to-white  font-medium text-sm px-5 py-2.5 text-center mr-2 mb-2 p-2.5 shadow-xl backdrop-blur-lg
            fixed left-6 min-h-[auto] min-w-[64px] flex-col rounded-lg border"
           initial="hidden"
           animate="visible"
@@ -86,10 +86,10 @@ const SocialSidebar = ({sidebarVisible, setSidebarVisible}) => {
           </a>
           </Link>
           <div
-            className="fixed top-2/4 -translate-y-2/4 ml-20  w-12 h-12 flex items-center justify-center gap-1 text-gray-700  rounded-full bg-white/50 shadow-lg backdrop-blur-lg cursor-pointer"
+            className="fixed top-2/4 -translate-y-2/4 ml-24  w-12 h-12 flex items-center justify-center gap-1 text-gray-700  rounded-full bg-white/50  shadow-lg btn-outline backdrop-blur-lg cursor-pointer"
             onClick={closeSidebar}
           >
-            <BsArrowLeftShort className="w-6 h-6" />
+            <BsArrowLeftShort className="  w-6 h-6" />
           </div>
         </motion.div>
       )}

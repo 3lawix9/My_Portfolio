@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import translations from "../translate/translations";
 import Typewriter from "typewriter-effect";
+import {BsArrowLeftShort, BsArrowRightShort} from 'react-icons/bs';
+
 
 const About = ({ language, openSideBar }) => {
   const currentLanguage = language;
@@ -52,7 +54,11 @@ const About = ({ language, openSideBar }) => {
             className="txt--gradient-blue border-r-indigo-500 text-white font-bold py-3 px-4 shadow-md rounded mt-4 transition
          duration-300 ease-in-out hover:text-black"
           >
+            <p className="flex flex-row  ">
             {getInTouch}
+          <BsArrowRightShort className="w-6 h-6 ml-2" />
+          </p>
+
           </button>
         </Link>
       </div>

@@ -33,7 +33,7 @@ const Nav = ({ language, toggleLanguage, openSideBar }) => {
 
   return (
     <nav className="flex top-0 fixed text-sm z-50 md:text-md w-full items-center justify-center p-4">
-      <div className="md:flex border-gray-500 bg-white/70 p-6 shadow-lg backdrop-blur-lg  rounded-2xl">
+      <div className="md:flex glass bg-white/50 p-6 shadow-lg backdrop-blur-lg  rounded-3xl">
         <ul className="flex">
           {links.map(({ label, href, icon: Icon }) => (
             <li key={label} className="sm:px-4">

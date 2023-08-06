@@ -42,21 +42,21 @@ const Experience = ({ language }) => {
 
         <div className="flex flex-wrap justify-center">
           {cards.map((card, index) => (
-            <motion.div
-              className="md:w-1/2 w-full p-4"
-              key={index}
-              variants={slideFromRight}
-              initial="hidden"
-              animate={inView ? 'visible' : 'hidden'}
-            >
-              <div className="border h-full shadow-xl bg-blue-50 border-blue-400 p-6 rounded-lg">
-                <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-blue-200 text-blue-600 mb-4">
-                  {card.icon}
-                </div>
-                <h2 className="text-lg font-bold title-font mb-2">{card.title}</h2>
-                <p>{card.description}</p>
-              </div>
-            </motion.div>
+             <motion.div
+      className="md:w-1/2 w-full p-4"
+      key={index}
+      variants={slideFromRight}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+    >
+      <div className="border h-full  bg-white glass p-8 rounded-lg transition-all duration-300 shadow-2xl ">
+        <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-700 mb-4">
+          {card.icon}
+        </div>
+        <h2 className="text-xl font-bold title-font mb-4">{card.title}</h2>
+        <p className="text-gray-600">{card.description}</p>
+      </div>
+    </motion.div>
           ))}
         </div>
       </div>
