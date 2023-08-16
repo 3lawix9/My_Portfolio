@@ -3,6 +3,8 @@ import {AiOutlineMobile} from 'react-icons/ai'
 import {BsSpeedometer2} from 'react-icons/bs'
 import {VscSymbolColor} from 'react-icons/vsc'
 import { SiTailwindcss } from "react-icons/si";
+import { DiMongodb, DiNodejsSmall } from 'react-icons/di';
+import { TbBrandNextjs } from 'react-icons/tb';
 
 const translations = {
   // Navbar
@@ -123,7 +125,7 @@ const translations = {
           title: 'Practiced and improved my skills with the Tailwind CSS framework to make the website faster with CSS.',
           link: 'https://github.com/3lawix9/AI-website',
           project: 'https://ai-website-sage.vercel.app',
-          extraIcon: <SiTailwindcss className="text-blue-500 text-2xl hover:-translate-y-1 transition-all duration-500" />,
+          extraIcon: <SiTailwindcss className="text-blue-500 text-4xl hover:-translate-y-1 transition-all duration-500" />,
         },
         {
           image: '/Website-4.png',
@@ -131,6 +133,18 @@ const translations = {
           title: 'Built a calculator to improve my programming skills with JavaScript.',
           link: 'https://github.com/3lawix9/Calculator',
           project: 'https://calculator-eta-black.vercel.app',
+        },
+        {
+          image: '/Website-5.png',
+          header: 'E-commerce',
+          title: 'I built an e-commerce website using the NextJs framework and focused a lot on the back-end to get data from the database and used Stripe for payment processing.',
+          link: 'https://github.com/3lawix9/E-commerce',
+          project: 'https://e-commerce-six-eta.vercel.app/',
+          extraIcon: [
+            <DiMongodb className="text-green-500 text-2xl hover:-translate-y-1 transition-all duration-500" />,
+            <DiNodejsSmall className="text-green-700 text-2xl hover:-translate-y-1 transition-all duration-500" />,
+            <TbBrandNextjs className="text-black text-2xl hover:-translate-y-1 transition-all duration-500" />,
+          ],
         },
       ],
   },
@@ -165,6 +179,20 @@ const translations = {
         title: <div dir="rtl">بناء آلة حاسبة لتحسين مهارات البرمجة الخاصة بي باستخدام JavaScript.</div>,
         link: 'https://github.com/3lawix9/Calculator',
         project: 'https://calculator-eta-black.vercel.app',
+      },
+      {
+        image: '/Website-5.png',
+        header: <div dir="rtl">متجر الكتروني</div>,
+        title: <div dir="rtl">
+        قمت ببناء موقع تجارة إلكترونية باستخدام إطار عمل Next.js وركزت كثيراً على الباك إند للحصول على البيانات من قاعدة البيانات واستخدمت Stripe لمعالجة الدفع.
+      </div>,
+        link: 'https://github.com/3lawix9/E-commerce',
+        project: 'https://e-commerce-six-eta.vercel.app/',
+        extraIcon: [
+          <DiMongodb className="text-green-500 text-2xl hover:-translate-y-1 transition-all duration-500" />,
+          <DiNodejsSmall className="text-green-700 text-2xl hover:-translate-y-1 transition-all duration-500" />,
+          <TbBrandNextjs className="text-black text-2xl hover:-translate-y-1 transition-all duration-500" />,
+        ],
       },
     ],
   },

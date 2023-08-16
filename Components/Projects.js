@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FaReact,  FaHtml5,  } from 'react-icons/fa';
-import { DiJavascript1,  DiNodejsSmall, DiCss3, DiMongodb } from 'react-icons/di';
+import { DiJavascript1,  DiNodejsSmall, DiCss3, DiMongodb,  } from 'react-icons/di'; // i put extra icon names just for colors :D 
 import { TbBrandNextjs } from "react-icons/tb";
 import 'intersection-observer';
 import translations from '../translate/translations';
@@ -40,22 +40,20 @@ function Projects({ language }) {
           Projects
         </p>
         <div className="grid xl:grid-cols-2 gap-10">
-          {PROJECTS_DATA.map(
-            ({ image, title, header, link, project, extraIcon }, element) => (
-              <motion.div
-                key={element}
-                className="shadow-md rounded-2xl bg-slate-200"
-                variants={slideFromLeft}
-                initial="hidden"
-                animate={inView ? 'visible' : 'hidden'}
-              >
+        {PROJECTS_DATA.map(({ image, title, header, link, project, extraIcon }, element) => (
+    <motion.div
+      key={element}
+      className={`shadow-md rounded-2xl bg-slate-200 ${element === PROJECTS_DATA.length - 1 ? ' xl:col-span-2' : ''}`}
+      variants={slideFromLeft}
+      initial="hidden"
+      animate={inView ? 'visible' : 'hidden'}
+    >
                 <div className="relative h-52 hover:scale-105 transition-all duration-700">
                   <Image
                     className="rounded-t-2xl"
                     src={image}
                     loading="lazy"
                     alt="Logo"
-                    sizes="100vw"
                     fill
                     style={{ objectFit: 'cover' }}
                   />
@@ -92,13 +90,14 @@ function Projects({ language }) {
                     </div>
                     <div className="flex-1 flex flex-col items-center justify-center">
                     <div className="text-5xl text-blue-500 ">...</div>
-                    {/* Allow the "Used Technologies" section to expand dynamically */}
+                    {/* icons */}
                     <h2 className="font-bold mt-4">Used Technologies:</h2>
                     <div id="tools" className="flex gap-2 mt-2 items-center justify-center">
                       <FaReact className="text-blue-600 text-2xl hover:-translate-y-1 transition-all duration-500" />
                       <DiJavascript1 className="text-yellow-500 text-2xl hover:-translate-y-1 transition-all duration-500" />
                       <FaHtml5 className="text-red-500 text-2xl hover:-translate-y-1 transition-all duration-500" />
                       <DiCss3 className="text-blue-500 text-2xl hover:-translate-y-1 transition-all duration-500" />
+                      
                       {extraIcon}
                     </div>
                   </div>
