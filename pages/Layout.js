@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Nav from '../Components/Nav';
 import About from '../Components/About';
 import Experience from '../Components/Experience';
@@ -11,8 +11,19 @@ const Layout = () => {
   const [language, setLanguage] = useState('ar');
   const [sidebarVisible, setSidebarVisible] = useState(false);
 
+  // Load the language from local storage when the component mounts
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('selectedLanguage');
+    if (savedLanguage) {
+      setLanguage(savedLanguage);
+    }
+  }, []);
+
+  // Toggle the language and update local storage
   const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'ar' : 'en');
+    const newLanguage = language === 'en' ? 'ar' : 'en';
+    setLanguage(newLanguage);
+    localStorage.setItem('selectedLanguage', newLanguage);
   };
 
   const toggleSidebar = () => {

@@ -106,20 +106,6 @@ const translations = {
   en: {
       PROJECTS_DATA: [
         {
-          image: '/Website-1.png',
-          header: 'Salah times',
-          title: 'First challenge on Twitter, and first time using API to fetch data from Aladhan.com website. I learned how to use the Axios library and some React hooks.',
-          link: 'https://github.com/3lawix9/My-first-website',
-          project: 'https://salawat.vercel.app',
-        },
-        {
-          image: '/Website-2.png',
-          header: 'Adventure website',
-          title: 'I used React Router and some Pure CSS and added a video to the website and more than one page .',
-          link: 'https://github.com/3lawix9/Adventure-website',
-          project: '',
-        },
-        {
           image: '/Website-3.png',
           header: 'Tech Bank website',
           title: 'Practiced and improved my skills with the Tailwind CSS framework to make the website faster with CSS.',
@@ -135,6 +121,20 @@ const translations = {
           project: 'https://calculator-eta-black.vercel.app',
         },
         {
+          image: '/Website-1.png',
+          header: 'Salah times',
+          title: 'First challenge on Twitter, and first time using API to fetch data from Aladhan.com website. I learned how to use the Axios library and some React hooks.',
+          link: 'https://github.com/3lawix9/My-first-website',
+          project: 'https://salawat.vercel.app',
+        },
+        {
+          image: '/Website-2.png',
+          header: 'Adventure website',
+          title: 'I used React Router and some Pure CSS and added a video to the website and more than one page .',
+          link: 'https://github.com/3lawix9/Adventure-website',
+          project: '',
+        },
+        {
           image: '/Website-5.png',
           header: 'E-commerce',
           title: 'I built an e-commerce website using the NextJs framework and focused a lot on the back-end to get data from the database and used Stripe for payment processing.',
@@ -147,38 +147,38 @@ const translations = {
           ],
         },
       ],
-  },
-
-  ar: {
-    PROJECTS_DATA: [
-      {
-        image: '/Website-1.png',
-        header: <div dir="rtl">أوقات الصلاة</div>,
-        title: <div dir="rtl">أول تحدي على تويتر وأول مرة أستخدم فيها واجهة برمجة تطبيقات لاستدعاء البيانات من موقع اذان تعلمت كيفية استخدام مكتبة Axios وبعض أدوات React.</div>,
-        link: 'https://github.com/3lawix9/My-first-website',
-        project: 'https://salawat.vercel.app',
-      },
-      {
-        image: '/Website-2.png',
+    },
+    
+    ar: {
+      PROJECTS_DATA: [
+        {
+          image: '/Website-3.png',
+          header: <div dir="rtl">موقع بنك رقمي</div>,
+          title: <div dir="rtl">تعلمت وطورت مهاراتي في إطار Tailwind CSS لجعل الموقع أسرع باستخدام CSS.</div>,
+          link: 'https://github.com/3lawix9/AI-website',
+          project: 'https://ai-website-sage.vercel.app',
+          extraIcon: <SiTailwindcss className="text-blue-500 text-2xl hover:-translate-y-1 transition-all duration-500" />,
+        },
+        {
+          image: '/Website-4.png',
+          header: <div dir="rtl">الآلة الحاسبة</div>,
+          title: <div dir="rtl">بناء آلة حاسبة لتحسين مهارات البرمجة الخاصة بي باستخدام JavaScript.</div>,
+          link: 'https://github.com/3lawix9/Calculator',
+          project: 'https://calculator-eta-black.vercel.app',
+        },
+        {
+          image: '/Website-1.png',
+          header: <div dir="rtl">أوقات الصلاة</div>,
+          title: <div dir="rtl">أول تحدي على تويتر وأول مرة أستخدم فيها واجهة برمجة تطبيقات لاستدعاء البيانات من موقع اذان تعلمت كيفية استخدام مكتبة Axios وبعض أدوات React.</div>,
+          link: 'https://github.com/3lawix9/My-first-website',
+          project: 'https://salawat.vercel.app',
+        },
+        {
+          image: '/Website-2.png',
         header: <div dir="rtl">موقع المغامرة</div>,
         title: <div dir="rtl">استخدمت React وبعض CSS العادي وأضفت فيديو إلى الموقع مع اضافه أكثر من صفحه.</div>,
         link: 'https://github.com/3lawix9/Adventure-website',
         project: '',
-      },
-      {
-        image: '/Website-3.png',
-        header: <div dir="rtl">موقع بنك رقمي</div>,
-        title: <div dir="rtl">تعلمت وطورت مهاراتي في إطار Tailwind CSS لجعل الموقع أسرع باستخدام CSS.</div>,
-        link: 'https://github.com/3lawix9/AI-website',
-        project: 'https://ai-website-sage.vercel.app',
-        extraIcon: <SiTailwindcss className="text-blue-500 text-2xl hover:-translate-y-1 transition-all duration-500" />,
-      },
-      {
-        image: '/Website-4.png',
-        header: <div dir="rtl">الآلة الحاسبة</div>,
-        title: <div dir="rtl">بناء آلة حاسبة لتحسين مهارات البرمجة الخاصة بي باستخدام JavaScript.</div>,
-        link: 'https://github.com/3lawix9/Calculator',
-        project: 'https://calculator-eta-black.vercel.app',
       },
       {
         image: '/Website-5.png',

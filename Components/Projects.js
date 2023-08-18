@@ -61,7 +61,7 @@ function Projects({ language }) {
                 <div className="p-6 flex-grow flex flex-col justify-between h-full">
                  
                   <div >
-                    <h1 className="mb-5 text-3xl items-center flex justify-center uppercase">
+                    <h1 className="mb-5 text-3xl font-bold items-center flex justify-center capitalize">
                       {header}
                     </h1>
                     <h3 className=" leading-norma font-semibold">{title}</h3>
