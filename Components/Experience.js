@@ -40,7 +40,7 @@ const Experience = ({ language }) => {
           </h1>
         </div>
 
-        <div className="flex flex-wrap justify-center">
+        <div className="flex flex-wrap  glass justify-center">
           {cards.map((card, index) => (
              <motion.div
       className="md:w-1/2 w-full p-4"
@@ -49,7 +49,7 @@ const Experience = ({ language }) => {
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
     >
-      <div className="border h-full  bg-white glass p-8 rounded-lg transition-all duration-300 shadow-2xl ">
+      <div className="border h-full  bg-white  p-8 rounded-lg transition-all duration-300 shadow-2xl ">
         <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-700 mb-4">
           {card.icon}
         </div>

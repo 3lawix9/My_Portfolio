@@ -134,18 +134,18 @@ const translations = {
           link: 'https://github.com/3lawix9/Adventure-website',
           project: '',
         },
-        {
-          image: '/Website-5.png',
-          header: 'E-commerce',
-          title: 'I built an e-commerce website using the NextJs framework and focused a lot on the back-end to get data from the database and used Stripe for payment processing.',
-          link: 'https://github.com/3lawix9/E-commerce',
-          project: 'https://e-commerce-six-eta.vercel.app/',
-          extraIcon: [
-            <DiMongodb className="text-green-500 text-2xl hover:-translate-y-1 transition-all duration-500" />,
-            <DiNodejsSmall className="text-green-700 text-2xl hover:-translate-y-1 transition-all duration-500" />,
-            <TbBrandNextjs className="text-black text-2xl hover:-translate-y-1 transition-all duration-500" />,
-          ],
-        },
+        // {
+        //   image: '/Website-5.png',
+        //   header: 'E-commerce',
+        //   title: 'I built an e-commerce website using the NextJs framework and focused a lot on the back-end to get data from the database and used Stripe for payment processing.',
+        //   link: 'https://github.com/3lawix9/E-commerce',
+        //   project: 'store-e-commerce.vercel.app',
+        //   extraIcon: [
+        //     <DiMongodb className="text-green-500 text-2xl hover:-translate-y-1 transition-all duration-500" />,
+        //     <DiNodejsSmall className="text-green-700 text-2xl hover:-translate-y-1 transition-all duration-500" />,
+        //     <TbBrandNextjs className="text-black text-2xl hover:-translate-y-1 transition-all duration-500" />,
+        //   ],
+        // },
       ],
     },
     
@@ -180,20 +180,20 @@ const translations = {
         link: 'https://github.com/3lawix9/Adventure-website',
         project: '',
       },
-      {
-        image: '/Website-5.png',
-        header: <div dir="rtl">متجر الكتروني</div>,
-        title: <div dir="rtl">
-        قمت ببناء موقع تجارة إلكترونية باستخدام إطار عمل Next.js وركزت كثيراً على الباك إند للحصول على البيانات من قاعدة البيانات واستخدمت Stripe لمعالجة الدفع.
-      </div>,
-        link: 'https://github.com/3lawix9/E-commerce',
-        project: 'https://e-commerce-six-eta.vercel.app/',
-        extraIcon: [
-          <DiMongodb className="text-green-500 text-2xl hover:-translate-y-1 transition-all duration-500" />,
-          <DiNodejsSmall className="text-green-700 text-2xl hover:-translate-y-1 transition-all duration-500" />,
-          <TbBrandNextjs className="text-black text-2xl hover:-translate-y-1 transition-all duration-500" />,
-        ],
-      },
+      // {
+      //   image: '/Website-5.png',
+      //   header: <div dir="rtl">متجر الكتروني</div>,
+      //   title: <div dir="rtl">
+      //   قمت ببناء موقع تجارة إلكترونية باستخدام إطار عمل Next.js وركزت كثيراً على الباك إند للحصول على البيانات من قاعدة البيانات واستخدمت Stripe لمعالجة الدفع.
+      // </div>,
+      //   link: 'https://github.com/3lawix9/E-commerce',
+      //   project: 'store-e-commerce.vercel.app',
+      //   extraIcon: [
+      //     <DiMongodb className="text-green-500 text-2xl hover:-translate-y-1 transition-all duration-500" />,
+      //     <DiNodejsSmall className="text-green-700 text-2xl hover:-translate-y-1 transition-all duration-500" />,
+      //     <TbBrandNextjs className="text-black text-2xl hover:-translate-y-1 transition-all duration-500" />,
+      //   ],
+      // },
     ],
   },
   

@@ -47,7 +47,7 @@ const SocialSidebar = ({sidebarVisible, setSidebarVisible}) => {
     <div className="relative bg-gray-50  w-screen">
       {!sidebarVisible && (
         <div
-          className="fixed btn-circle btn-outline z-20 top-2/4 -translate-y-2/4 ml-4 w-12 h-12 lg:flex flex items-center justify-center gap-1 text-gray-700 shadow-lg backdrop-blur-lg cursor-pointer"
+          className="fixed swap swap-rotate btn-circle btn-outline z-20 top-2/4 -translate-y-2/4 ml-4 w-12 h-12 lg:flex flex items-center justify-center gap-1 text-gray-700 shadow-lg backdrop-blur-lg cursor-pointer"
           onClick={toggleSidebar}
         >
         <BsArrowRightShort className="w-6 h-6" />
@@ -86,7 +86,7 @@ const SocialSidebar = ({sidebarVisible, setSidebarVisible}) => {
           </a>
           </Link>
           <div
-            className="fixed top-2/4 -translate-y-2/4 ml-24  w-12 h-12 flex items-center justify-center gap-1 text-gray-700  rounded-full bg-white/50  shadow-lg btn-outline backdrop-blur-lg cursor-pointer"
+            className="fixed top-2/4 swap swap-rotate -translate-y-2/4 ml-24  w-12 h-12 flex items-center justify-center gap-1 text-gray-700  rounded-full bg-white/50  shadow-lg btn-outline backdrop-blur-lg cursor-pointer"
             onClick={closeSidebar}
           >
             <BsArrowLeftShort className="  w-6 h-6" />
