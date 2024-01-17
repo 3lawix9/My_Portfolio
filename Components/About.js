@@ -5,12 +5,13 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import translations from "../translate/translations";
 import Typewriter from "typewriter-effect";
-import {BsArrowLeftShort, BsArrowRightShort} from 'react-icons/bs';
+import { BsArrowRightShort} from 'react-icons/bs';
+import { AiOutlineEye } from "react-icons/ai";
 
 
 const About = ({ language, openSideBar }) => {
   const currentLanguage = language;
-  const { hi, name, role, description, getInTouch } =
+  const { hi, name, role, description, getInTouch, cvData } =
     translations.about[currentLanguage];
 
   const isArabic = currentLanguage === "ar";
@@ -48,19 +49,31 @@ const About = ({ language, openSideBar }) => {
             {description}
           </p>
         }
-        <Link to="contact" spy={true} smooth={true} offset={50} duration={500}>
-          <button
-            onClick={openSideBar}
-            className="txt--gradient-blue border-r-indigo-500 text-white font-bold py-3 px-4 shadow-md rounded mt-4 transition
-         duration-300 ease-in-out hover:text-black"
-          >
-            <p className="flex flex-row  ">
-            {getInTouch}
-          <BsArrowRightShort className="w-6 h-6 ml-2" />
-          </p>
+        <div className="space-x-6">
+          <a href="https://www.cakeresume.com/s--rb7oFTN5aESboZ_lXIml0Q--/ali-wer" target="_blank" rel="noopener noreferrer">
+            <button
+              className="txt--gradient-blue border-r-indigo-500 text-white font-bold py-4 px-5 shadow-md rounded-md mt-4 transition duration-300 ease-in-out hover:text-black"
+              onClick={openSideBar}
+            >
+              <p className="flex flex-row  ">
+                {cvData}
+                <AiOutlineEye className="w-6 h-6 ml-2" />
+              </p>
+            </button>
+          </a>
+          <Link to="contact" spy={true} smooth={true} offset={50} duration={500}>
+            <button
+              onClick={openSideBar}
+              className="txt--gradient-blue border-r-indigo-500 text-white font-bold py-4 px-5 shadow-md rounded-md mt-4 transition duration-300 ease-in-out hover:text-black"
+            >
+              <p className="flex flex-row  ">
+                {getInTouch}
+                <BsArrowRightShort className="w-6 h-6 ml-2" />
+              </p>
+            </button>
+          </Link>
 
-          </button>
-        </Link>
+        </div>
       </div>
       <div className={`flex flex-col ${imageAlignment}`}>
         <Image

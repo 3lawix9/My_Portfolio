@@ -55,10 +55,12 @@ function Skills() {
 
   return (
     <div id="skills" className="w-full mb-28 p-2" ref={ref}>
-      <div className="max-w-[1020px] mx-auto flex flex-col justify-center h-full relative"> {/* Added 'relative' class */}
-        <p className="text-xl mb-8 tracking-widest text-center uppercase text-blue-900">
+      <div className="  max-w-[1020px] mx-auto flex flex-col justify-center h-full relative"> {/* Added 'relative' class */}
+        <p className="text-xl mb-8 tracking-widest text-center uppercase text-blue-900">1
+          
           Skills & Technology
         </p>
+        
 
         <div className="grid sm:grid-cols-2 sm:gap-8">
           {skills_icon.map(({ Icon, color, title }, element) => (
@@ -86,3 +88,5 @@ function Skills() {
 }
 
 export default Skills;
+
+

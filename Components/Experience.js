@@ -40,7 +40,7 @@ const Experience = ({ language }) => {
           </h1>
         </div>
 
-        <div className="flex flex-wrap  glass justify-center">
+        <div className="flex flex-wrap  justify-center">
           {cards.map((card, index) => (
              <motion.div
       className="md:w-1/2 w-full p-4"

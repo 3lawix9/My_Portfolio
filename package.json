@@ -33,6 +33,7 @@
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7",
     "tailwindcss-debug-screens": "^2.2.1",
+    "typescript": "^5.3.3",
     "webpack-cli": "^5.0.2"
   }
 }

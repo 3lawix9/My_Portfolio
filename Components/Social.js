@@ -56,7 +56,7 @@ const SocialSidebar = ({sidebarVisible, setSidebarVisible}) => {
 
       {sidebarVisible && (
         <motion.div
-          className="z-20 top-1/4 glass justify-around gap-4 border-t text-white bg-gradient-to-br from-gray-200 to-white  font-medium text-sm px-5 py-2.5 text-center mr-2 mb-2 p-2.5 shadow-xl backdrop-blur-lg
+          className="z-20 top-1/4 glass justify-around gap-4 border-t text-white bg-gradient-to-br from-gray-200 to-white  font-medium text-sm px-5 py-2.5 text-center mr-2 mb-2  p-2.5 shadow-xl backdrop-blur-lg
            fixed left-6 min-h-[auto] min-w-[64px] flex-col rounded-lg border"
           initial="hidden"
           animate="visible"

@@ -34,6 +34,7 @@ const translations = {
       description:
       "I'm a self-taught Developer from Yemen \nspecializing in web development",
       getInTouch: 'Get in touch',
+      cvData: "Watch my resume"
     },
     ar: {
       hi: 'مرحبًا، أنا 👋',
@@ -43,6 +44,7 @@ const translations = {
       description:
         'مطور ويب من اليمن، متخصص في تطوير الويب بشكل عام وتطوير واجهات المستخدم الأمامية بشكل خاص',
       getInTouch: 'تواصل معي',
+      cvData: "السيرة الذاتيه"
     },
   },
 
@@ -130,7 +132,7 @@ const translations = {
         {
           image: '/Website-2.png',
           header: 'Adventure website',
-          title: 'I used React Router and some Pure CSS and added a video to the website and more than one page .',
+          title: 'I used React Router and some Pure CSS and added a video to the website and more than one page to helps trans between a lot of pages  .',
           link: 'https://github.com/3lawix9/Adventure-website',
           project: '',
         },
@@ -146,6 +148,16 @@ const translations = {
         //     <TbBrandNextjs className="text-black text-2xl hover:-translate-y-1 transition-all duration-500" />,
         //   ],
         // },
+        {
+          image: '/Website-6.png',
+          header: 'Cleaning company',
+          title: 'I built a landing page for company that make cleaning for tanks water and others using the NextJs framework .',
+          link: '',
+          project: 'https://tanksclean.vercel.app/',
+          extraIcon: [
+            <TbBrandNextjs className="text-black text-2xl hover:-translate-y-1 transition-all duration-500" />,
+          ],
+        },
       ],
     },
     
@@ -176,7 +188,7 @@ const translations = {
         {
           image: '/Website-2.png',
         header: <div dir="rtl">موقع المغامرة</div>,
-        title: <div dir="rtl">استخدمت React وبعض CSS العادي وأضفت فيديو إلى الموقع مع اضافه أكثر من صفحه.</div>,
+        title: <div dir="rtl">استخدمت React وبعض CSS العادي وأضفت فيديو إلى الموقع مع اضافه أكثر من صفحه لسهولة الوصول والتنقل بين الصفحات باستخدام مكتبه رياكت.</div>,
         link: 'https://github.com/3lawix9/Adventure-website',
         project: '',
       },
@@ -194,6 +206,16 @@ const translations = {
       //     <TbBrandNextjs className="text-black text-2xl hover:-translate-y-1 transition-all duration-500" />,
       //   ],
       // },
+      {
+          image: '/Website-6.png',
+          header: 'شركة التميز ',
+          title: ' قمت ببناء صفحة لشركة تقوم بتنظيف خزانات المياه وغيرها باستخدام  NextJs .',
+          link: '',
+          project: 'https://tanksclean.vercel.app/',
+          extraIcon: [
+            <TbBrandNextjs className="text-black text-2xl hover:-translate-y-1 transition-all duration-500" />,
+          ],
+        },
     ],
   },
   
