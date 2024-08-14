@@ -14,7 +14,7 @@ const About = ({ language, openSideBar }) => {
   const { hi, name, role, description, getInTouch, cvData } =
     translations.about[currentLanguage];
 
-  const isArabic = currentLanguage === "ar";
+  const isArabic = currentLanguage === "ar";  
   const textAlignment = isArabic
     ? "lg:text-right text-center"
     : "lg:text-left text-center";
@@ -29,8 +29,8 @@ const About = ({ language, openSideBar }) => {
       className="flex flex-col lg:flex-row items-center justify-center h-[85vh] mt-52 lg:mt-0"
     >
       <div className={`${textAlignment} `}>
-        <p className="text-lg font-semibold">{hi}</p>
-        <h1 className="text-4xl lg:text-6xl uppercase font-bold mb-4">
+        <p className="text-lg mb-4 font-semibold">{hi}</p>
+        <h1 className="text-4xl lg:text-6xl uppercase  font-semibold mb-6">
           {name}
         </h1>
         <Typewriter
@@ -45,34 +45,33 @@ const About = ({ language, openSideBar }) => {
         />
         {
           <p className="text-slate-600 mt-2
-           font-bold capitalize py-1">
+           font-bold text-lg capitalize py-1">
             {description}
           </p>
         }
-        <div className="space-x-6">
+         <div className="space-x-4 mt-6">
           <a href="https://www.cakeresume.com/s--rb7oFTN5aESboZ_lXIml0Q--/ali-wer" target="_blank" rel="noopener noreferrer">
             <button
-              className="txt--gradient-blue border-r-indigo-500 text-white font-bold py-4 px-5 shadow-md rounded-md mt-4 transition duration-300 ease-in-out hover:text-black"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105"
               onClick={openSideBar}
             >
-              <p className="flex flex-row  ">
+              <span className="flex items-center">
                 {cvData}
-                <AiOutlineEye className="w-6 h-6 ml-2" />
-              </p>
+                <AiOutlineEye className="w-5 h-5 ml-2" />
+              </span>
             </button>
           </a>
           <Link to="contact" spy={true} smooth={true} offset={50} duration={500}>
             <button
               onClick={openSideBar}
-              className="txt--gradient-blue border-r-indigo-500 text-white font-bold py-4 px-5 shadow-md rounded-md mt-4 transition duration-300 ease-in-out hover:text-black"
+              className="bg-blue-600 mr-4 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105"
             >
-              <p className="flex flex-row  ">
+              <span className="flex items-center">
                 {getInTouch}
-                <BsArrowRightShort className="w-6 h-6 ml-2" />
-              </p>
+                <BsArrowRightShort className="w-5 h-5 ml-2" />
+              </span>
             </button>
           </Link>
-
         </div>
       </div>
       <div className={`flex flex-col ${imageAlignment}`}>

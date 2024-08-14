@@ -34,7 +34,7 @@ function Projects({ language }) {
   };
 
   return (
-    <div id="projects" className="w-full mb-28 p-2" ref={ref}>
+    <div id="projects" className="relative w-full mb-28 p-2" ref={ref}>
       <div className="max-w-[500px] lg:max-w-[900px] mx-auto flex flex-col justify-center h-full">
         <p className="text-xl mb-12 tracking-widest text-center uppercase text-blue-900">
           Projects
@@ -44,12 +44,12 @@ function Projects({ language }) {
         {PROJECTS_DATA.map(({ image, title, header, link, project, extraIcon }, element) => (
     <motion.div
       key={element}
-      className={`shadow-md rounded-2xl bg-slate-100/80\ ${element === PROJECTS_DATA.length - 1 && PROJECTS_DATA.length % 2 !== 0 ? 'xl:col-span-2' : ''}`}
+      className={`bg-gradient-to-r from-slate-200 to-slate-100  bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-8 shadow-xl border border-white border-opacity-20 ${element === PROJECTS_DATA.length - 1 && PROJECTS_DATA.length % 2 !== 0 ? 'xl:col-span-2' : ''}`}
       variants={slideFromLeft}
       initial="hidden"
       animate={inView ? 'visible' : 'hidden'}
     >
-                <div className="relative h-52 hover:scale-105 transition-all duration-700">
+                <div className="relative h-52 hover:scale-105 transition-all duration-700 ">
                   <Image
                     className="rounded-t-2xl"
                     src={image}
@@ -62,11 +62,11 @@ function Projects({ language }) {
                 <div className="p-6 flex-grow flex flex-col justify-between h-full">
                  {/* title */}
                   <div >
-                    <h1 className="mb-5 text-3xl font-bold items-center flex justify-center capitalize">
+                    <h1 className="mb-5 p-2 rounded-sm text-3xl font-bold items-center flex justify-center capitalize">
                       {header}
                     </h1>
                     {/* I mean subtitle xD */}
-                    <h3 className=" leading-norma font-semibold">{title}</h3>
+                    <h3 className=" leading-norma font-semibold ">{title}</h3>
 
                     {/* buttons */}
                     <div className="mt-6 flex gap-4 justify-center items-center ">
@@ -125,6 +125,12 @@ function Projects({ language }) {
             )
           )}
         </div>
+      </div>
+            {/* Abstract shapes for background */}
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-20">
+        <div className="absolute w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob"></div>
+        <div className="absolute w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-2000 top-1/3 right-1/4"></div>
+        <div className="absolute w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-4000 bottom-1/4 left-1/3"></div>
       </div>
     </div>
   );

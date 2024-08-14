@@ -10,6 +10,7 @@ function Quotes() {
 
   useEffect(() => {
     axios
+
       .get('/api/quotes')
       .then(response => {
         const data = response.data;
@@ -24,6 +25,7 @@ function Quotes() {
 
   return (
 <section className="text-gray-900">
+
   <div className="container px-5 py-24 mx-auto flex justify-center items-center">
     <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
       <FaQuoteRight className="text-4xl mb-4 text-blue-500" />
